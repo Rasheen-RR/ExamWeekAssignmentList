@@ -526,5 +526,72 @@ namespace CalculatorTest
             double result = simpleCalc.divideNumbers(a, b);
             Assert.AreEqual(result, ans);
         }
+
+
+
+        // Operation Tests
+
+        [TestMethod]
+        public void OperationDivision()
+        {
+            SimpleCalc simpleCalc = new SimpleCalc();
+            double a = 10.0;
+            double b = 20.0;
+
+            double ans = a / b;
+            double result = simpleCalc.OperatorSwitch(a, b, "/");
+            Assert.AreEqual(result, ans);
+        }
+
+
+        [TestMethod]
+        public void OperationMultiplication()
+        {
+            SimpleCalc simpleCalc = new SimpleCalc();
+            double a = 10.0;
+            double b = 20.0;
+
+            double ans = a * b;
+            double result = simpleCalc.OperatorSwitch(a, b, "*");
+            Assert.AreEqual(result, ans);
+        }
+
+
+        [TestMethod]
+        public void OperationAddition()
+        {
+            SimpleCalc simpleCalc = new SimpleCalc();
+            double a = 10.0;
+            double b = 20.0;
+
+            double ans = a + b;
+            double result = simpleCalc.OperatorSwitch(a, b, "+");
+            Assert.AreEqual(result, ans);
+        }
+
+        [TestMethod]
+        public void OperationSubstraction()
+        {
+            SimpleCalc simpleCalc = new SimpleCalc();
+            double a = 12.0;
+            double b = 0.1230;
+
+            double ans = a - b;
+            double result = simpleCalc.OperatorSwitch(a, b, "-");
+            Assert.AreEqual(result, ans);
+        }
+
+
+        [TestMethod]
+        public void OperationDefault()
+        {
+            SimpleCalc simpleCalc = new SimpleCalc();
+            double a = -2.0;
+            double b = 0.120;
+
+            double ans = double.NaN;
+            double result = simpleCalc.OperatorSwitch(a, b, "0");
+            Assert.AreEqual(result, ans);
+        }
     }
 }

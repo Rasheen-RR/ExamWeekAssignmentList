@@ -34,6 +34,10 @@ namespace CalculatorLibrary
             {
                 result = leftNumber / rightNumber;
             }
+            else
+            {
+                result = double.PositiveInfinity;
+            }
             return result;
         }
 
